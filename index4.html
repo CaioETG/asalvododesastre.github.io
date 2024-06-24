@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Uso</title>
+    <style>
+        /* Definição de cores */
+        :root {
+            --cor-primaria: rgb(32, 161, 32); /* Verde */
+            --cor-secundaria: rgb(165, 101, 42); /* Marrom */
+            --cor-texto: #333; /* Branco para texto */
+            --cor-link: #8BC34A; /* Verde claro para links */
+            --cor-link-hover: #0056b3; /* Azul para links em hover */
+            --cor-bg-header: rgba(255, 255, 255, 0); /* Fundo do cabeçalho com transparência */
+            --cor-bg-main: #fff; /* Fundo principal branco */
+            --cor-bg-footer: rgba(165, 101, 42, 0); /* Fundo do rodapé com transparência */
+            --cor-border-header: #fff; /* Cor da borda do cabeçalho */
+            --cor-shadow: rgba(0, 0, 0, 0.1); /* Sombra para os elementos */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-size: 100% 100%;
+            background: linear-gradient(var(--cor-primaria), var(--cor-secundaria)) no-repeat;
+            color: var(--cor-texto);
+        }
+
+        header {
+            width: 100%;
+            max-width: 1280px;
+            background-color: var(--cor-bg-header);
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            border-radius: 10px;
+            border: 2px solid var(--cor-border-header);
+            box-shadow: 0 2px 5px var(--cor-shadow);
+        }
+
+        header .title {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .inicio {
+            color: #fff;
+            display: block;
+            text-align: center; /* Centraliza o botão */
+            margin-top: 10px; /* Espaçamento do topo */
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin-right: 25px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: var(--cor-texto);
+            padding: 10px 20px;
+            display: block;
+            background-color: var(--cor-link);
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background-color: var(--cor-link-hover);
+            transform: scale(1.1);
+        }
+
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--cor-bg-main);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+        }
+
+        main h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--cor-primaria);
+        }
+
+        main p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: var(--cor-bg-footer);
+            color: var(--cor-texto);
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--cor-link);
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--cor-link-hover);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="title">A SALVO DO DESASTRE</h1>
+        <nav>
+            <ul>
+                <li><a class="inicio" href="index.html">Início</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Termos de Uso</h1>
+        <p>1. Aceitação dos Termos</p>
+        <p>1.1. Ao acessar ou utilizar nosso site, você concorda em seguir e estar vinculado a estes termos de uso.</p>
+        <p>2. Uso do Site</p>
+        <p>2.1. Você concorda em utilizar nosso site apenas para fins legais e de acordo com estes termos.</p>
+        <p>2.2. Você não deve utilizar nosso site de forma que possa danificar, desativar, sobrecarregar ou prejudicar nosso site ou interferir no uso de outros usuários.</p>
+        <p>3. Propriedade Intelectual</p>
+        <p>3.1. Todo o conteúdo do site, incluindo textos, gráficos, logotipos, ícones, imagens, áudio e vídeo, é de propriedade exclusiva nossa ou de nossos licenciadores e está protegido por leis de direitos autorais e outras leis de propriedade intelectual.</p>
+        <p>4. Limitação de Responsabilidade</p>
+        <p>4.1. Em nenhuma circunstância seremos responsáveis por danos diretos, indiretos, incidentais, consequenciais ou especiais decorrentes do uso ou incapacidade de uso de nosso site.</p>
+        <p>5. Disposições Gerais</p>
+        <p>5.1. Estes termos serão regidos e interpretados de acordo com as leis do Brasil sem considerar conflitos de disposições legais.</p>
+        <p>5.2. Se qualquer disposição destes termos for considerada inválida ou inexequível por um tribunal, as disposições restantes destes termos permanecerão em pleno vigor e efeito.</p>
+    </main>
+
+    <footer>
+        <a href="#">Voltar ao topo</a>
+    </footer>
+</body>
+</html>

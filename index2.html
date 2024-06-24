@@ -1,0 +1,141 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fale Conosco</title>
+        <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 768px)">
+        <link rel="stylesheet" href="smartphone.css" media="screen and (max-width: 767px)">
+        <style>
+            .keyword-1 {
+                color: #8BC34A;
+            }
+            /* Estilos adicionais conforme necessário */
+            .comments {
+                margin-top: 20px;
+                border-top: 1px solid #ccc;
+                padding-top: 20px;
+            }
+            .comment-list {
+                list-style-type: none;
+                padding: 0;
+            }
+            .comment {
+                margin-bottom: 10px;
+                padding: 10px;
+                border: 1px solid #eee;
+                background-color: #f9f9f9;
+            }
+            /* Estilos para dispositivos menores */
+            @media screen and (max-width: 767px) {
+                .container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: stretch;
+                }
+                .comments {
+                    order: 1; /* Colocar os comentários depois do formulário */
+                }
+                .comment-list {
+                    padding-left: 10px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="title">
+                <h1>Fale Conosco</h1>
+            </div>
+            <div class="tags">
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">Início</a></li>
+                        <!-- Adicione mais links conforme necessário -->
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <div class="container">
+            <div class="content">
+                <h2 class="keyword-1">Envie sua mensagem</h2>
+                <p class="keyword-2">
+                    Utilize o formulário abaixo para nos enviar suas dúvidas, sugestões ou comentários.
+                </p>
+                <!-- Formulário de comentários -->
+                <form id="comment-form">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="phone">Telefone:</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+    
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+    
+            <!-- Área para mostrar os comentários -->
+            <div class="comments">
+                <h2>Comentários dos Usuários</h2>
+                <ul class="comment-list" id="comment-list">
+                    <!-- Comentários serão inseridos dinamicamente aqui -->
+                </ul>
+            </div>
+        </div>
+    
+        <footer>
+            <p>&copy; 2024 A Salvo Do Desastre. Todos os direitos reservados.</p>
+        </footer>
+    
+        <!-- Script para manipulação dos comentários -->
+        <script>
+            // Captura o formulário de comentários
+            const commentForm = document.getElementById('comment-form');
+            // Captura a lista de comentários
+            const commentList = document.getElementById('comment-list');
+    
+            // Função para lidar com o envio do formulário
+            commentForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Previne o envio padrão do formulário
+    
+                // Captura os valores dos campos
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const message = document.getElementById('message').value;
+    
+                // Cria um novo item de comentário
+                const newComment = document.createElement('li');
+                newComment.classList.add('comment');
+                newComment.innerHTML = `
+                    <p><strong>${name}</strong> (${email}) - ${phone}<br>${message}</p>
+                `;
+    
+                // Adiciona o novo comentário à lista
+                commentList.appendChild(newComment);
+    
+                // Limpa os campos do formulário após o envio
+                commentForm.reset();
+            });
+        </script>
+
+
+
+    </body>
+    </html>
+    
