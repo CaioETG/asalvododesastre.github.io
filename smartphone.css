@@ -18,6 +18,13 @@ header {
     border: #ffffff solid;
 }
 
+.vw-access-button {
+    position: fixed;
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    z-index: 1000; /* Garante que o ícone esteja acima de outros elementos */
+}
+
 .container {
     text-align: center; 
 }
